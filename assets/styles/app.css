@@ -1,66 +1,187 @@
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+ul {
+    list-style: none
+}
+
+button,
+input,
+select {
+    margin: 0
+}
+
+html {
+    box-sizing: border-box
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%
+}
+
+iframe {
+    border: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td,
+th {
+    padding: 0
+}
 
 /**
- * 0 - GENERIC
+ * GENERIC
  */
 html * {
     font-family: 'Raleway';
     color: #000;
 }
 
-a
-{ 
+a {
     text-decoration: none;
 }
 
-a:hover
-{
+a:hover {
     text-decoration: underline;
-    color:#0065FC;
+    color: #0065FC;
 }
 
-main, footer {
-    padding: 0px 30px;
+main,
+footer {
+    padding: 30px;
+}
+
+h1,
+h2,
+h3 {}
+
+h1 {
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h2 {}
+
+h3 {}
+
+input {
+    border: #F5F5F5 solid 1px;
+    height: 40px;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+section,
+.section {
+    margin-bottom: 30px;
 }
 
 /**
- * 0 - END GENERIC
+ * END GENERIC
  */
 
 /**
- * 1 - HEADER
+ * BTN
  */
-header{
+.btn {
+    padding: 10px;
+    background-color:#0065FC;
+    border-radius: 10px;
+    border: transparent;
+}
+
+.btn:hover {
+    background-color: #004ec2;
+    cursor: pointer;
+}
+
+/**
+ * END BTN
+ */
+
+/**
+ * HEADER
+ */
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.logo
-{
+.logo {
     width: 95px;
     margin-top: 27px;
     margin-left: 30px;
 }
 
-header > nav
-{
+img {
+    max-width: 100%;
+}
+
+header>nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-size: 14px;
 }
 
-header > nav > a
-{
+header>nav>a {
     padding: 20px 0;
     border-bottom: #F5F5F5 solid 3px;
     flex: 1 1 0px;
     text-align: center;
 }
 
-header > nav > a.active,
-header > nav > a:hover {
+header>nav>a.active,
+header>nav>a:hover {
     text-decoration: none;
     color: #0065FC;
     border-bottom-color: #0065FC;
@@ -76,22 +197,21 @@ header > nav > a:hover {
 }
 
 @media (min-width: 768px) {
-    header{
+    header {
         flex-direction: row;
     }
 
-    header > nav {
+    header>nav {
         margin-right: 30px;
     }
 
-    header > nav > a
-    {
+    header>nav>a {
         padding: 42px 30px;
         border-bottom: none;
     }
 
-    header > nav > a.active,
-    header > nav > a:hover {
+    header>nav>a.active,
+    header>nav>a:hover {
         border-top: #0065FC solid 3px;
     }
 
@@ -99,6 +219,56 @@ header > nav > a:hover {
         position: static;
     }
 }
+
+/**             
+ * END HEADER
+ */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 /**
- * 1 - END HEADER
+ * SEARCH
+ */
+.search {
+    position: inline-block;
+    display: flex;
+    position: relative;
+    border: none;
+}
+
+.search input {
+    flex-grow: 1;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search .fa-map-marker-alt {
+    background-color: #E8E8E8;
+    padding: 12px 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.search .btn {
+    position: absolute;
+    top: 0px;
+    right: -3px;
+    padding: 12px;
+}
+
+.search .btn .fa-search {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .search {
+        max-width: 240px;
+    }
+}
+
+/**
+ * END SEARCH
  */
