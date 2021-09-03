@@ -1,65 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    
-    <title>Réservia</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/styles/app.css">
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="assets/images/logo.png" alt="logo Reservia">
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
 
-      <nav id="links">
-        <a href="#" class="active">Hébergements</a>
-        <a href="#">Activités</a>
-        <a href="#" class="register_link">S'inscrire</a>
-      </nav> 
-    </header>
+  <title>Réservia</title>
 
-    <main>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/styles/app.css">
+</head>
 
-      <section>
-        <h1>Trouvez votre Hébergements pour des vacances de réves</h1>
-        <span>En plein centre ville ou en pleine nature</span>
-      </section>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="logo Reservia">
+    </div>
 
-      <div class="section">
-        <span class="search">
-          <i class="fas fa-map-marker-alt"></i>
-          <input type="text" placeholder="Marseille, France" />
-          <button class="btn">
-            <i class="fas fa-search"></i>
-          </button>
-        </span>
-      </div>
+    <nav id="links">
+      <a href="#" class="active">Hébergements</a>
+      <a href="#">Activités</a>
+      <a href="#" class="register_link">S'inscrire</a>
+    </nav>
+  </header>
 
-      <section>
-        <h2>Les plus populaires</h2>
-        <h3>Hôtel Le soleil du matin</h3>
-      </section>
+  <main>
 
-      <section>
-        <h2>Hébergements à Marseille</h2>
-      </section>
+    <section>
+      <h1>Trouvez votre Hébergements pour des vacances de réves</h1>
+      <span>En plein centre ville ou en pleine nature</span>
+    </section>
 
-      <section>
-        <h2>Activités à Marseille</h2>
-      </section>
-    </main>
+    <div class="section">
+      <span class="search">
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="text" placeholder="Marseille, France" />
+        <button class="btn">
+          <i class="fas fa-search"></i>
+          <span>Rechercher</span>
+        </button>
+      </span>
+    </div>
 
-    <footer>
+    <!-- FILTRES -->
+    <div class="section filtres">
+      <span class="element_filtre_titre">
+        Filtres
+      </span>
+      <span class="element_filtre">
+        <i class="fas fa-money-bill-wave"></i>
+        Economique
+      </span><span class="element_filtre">
+        <i class="fas fa-child"></i>
+        Familial
+      </span><span class="element_filtre">
+        <i class="fas fa-heart"></i>
+        Romantique
+      </span><span class="element_filtre">
+        <i class="fas fa-dog"></i>
+        Animaux autorisés
+      </span>
+    </div>
+    <!-- FIN FILTRE -->
+    <section>
+      <h2>Les plus populaires</h2>
+      <h3>Hôtel Le soleil du matin</h3>
+    </section>
 
-    </footer>
-  </body>
+    <section>
+      <h2>Hébergements à Marseille</h2>
+    </section>
+
+    <section>
+      <h2>Activités à Marseille</h2>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+
 </html>
