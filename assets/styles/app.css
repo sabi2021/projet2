@@ -405,24 +405,24 @@ main {
     height: 150px;
 }
 .card .card-img {
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
     overflow: hidden;
     width: 150px;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 .card .card-img img {
-    object-fit: cover;
-    max-width: 140%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 .card .card-body {
     flex-basis: 45%;
     margin-left: 20px;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 
