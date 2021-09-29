@@ -93,6 +93,10 @@ a:hover {
     color: #0065FC;
 }
 
+a.info {
+    font-weight: bold;
+}
+
 main,
 footer {
     padding: 30px;
@@ -135,8 +139,8 @@ section,
     margin-bottom: 30px;
 }
 
-section.section_contrast,
-.section.section_contrast {
+section.section_bg,
+.section.section_bg {
     background-color: #E8E8E8;
 }
 
@@ -144,7 +148,6 @@ section.section_with_space,
 .section.section_with_space {
     padding: 30px;
 }
-
 /**
  * END GENERIC
  */
@@ -166,7 +169,6 @@ section.section_with_space,
 /**
  * END BTN
  */
-
 
 /**
  * ICON
@@ -268,6 +270,16 @@ header>nav>a:hover {
 main {
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    main section.section_with_space,
+    main .section.section_with_space {
+        margin-left: -30px;
+        margin-right: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 /**
@@ -403,20 +415,24 @@ main {
     display: flex;
     margin-bottom: 20px;
     height: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
 .card .card-img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     overflow: hidden;
     width: 150px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .card .card-img img {
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    max-width: 200%;
 }
+
 .card .card-body {
     flex-basis: 65%;
     margin-left: 20px;
@@ -425,56 +441,41 @@ main {
     justify-content: space-around;
 }
 
-.info {
-    font-weight: bold;
+/**
+ * Vertical class modifer
+ */
+.card.card-vertical {
+    height: auto;
+    flex-wrap: wrap;
 }
-@media (max-width: 768px) {
-    /**
-    * Vertical class modifer
-    */
-    .card.card-vertical {
-        height: auto;
-        flex-wrap: wrap;
-    }
 
-    .card.card-no-border {
-        padding: 0px;
-    }
+.card.card-no-border {
+    padding: 0px;
+}
 
-    .card.card-vertical .card-img{
-        height: 160px;
-    }
+.card.card-vertical .card-img{
+    height: 120px;
+}
 
-    .card.card-vertical .card-img img{
-        border-bottom-left-radius: 0px;
-        width: 100%;
-    }
+.card.card-vertical .card-img img{
+    border-bottom-left-radius: 0px;
+    width: 100%;
+}
 
-    .card.card-vertical .card-img {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 0px;
-        flex-basis: 100%;
-    }
+.card.card-vertical .card-img {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    flex-basis: 100%;
+}
 
-    .card.card-vertical .card-body {
-        flex-basis: 100%;
-        padding: 20px;
-        margin-left: 0px
-    }
+.card.card-vertical .card-body {
+    flex-basis: 100%;
+    padding: 20px;
+    margin-left: 0px
 }
 /**
- * No border modifier
+ * End vertical modifier
  */
-
-.section_without_contrast .card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.section_without_contrast .card:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 /* END CARD */
 
 /* .hotels_section1 {
