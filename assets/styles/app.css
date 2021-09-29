@@ -418,14 +418,16 @@ main {
     width: 100%;
 }
 .card .card-body {
-    flex-basis: 45%;
+    flex-basis: 65%;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-
+.info {
+    font-weight: bold;
+}
 @media (max-width: 768px) {
     /**
     * Vertical class modifer
