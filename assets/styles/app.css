@@ -93,8 +93,9 @@ a:hover {
     color: #0065FC;
 }
 
-a.info {
+.info {
     font-weight: bold;
+    cursor: pointer;
 }
 
 main,
@@ -142,11 +143,14 @@ section,
 section.section_bg,
 .section.section_bg {
     background-color: #E8E8E8;
+    border: radius 20px;
 }
 
 section.section_with_space,
 .section.section_with_space {
     padding: 30px;
+    border-radius: 20px;
+  
 }
 /**
  * END GENERIC
@@ -270,6 +274,7 @@ header>nav>a:hover {
 main {
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
 }
 
 @media (max-width: 768px) {
@@ -279,6 +284,29 @@ main {
         margin-right: -30px;
         padding-left: 30px;
         padding-right: 30px;
+        
+    
+    }
+
+    .section_with_space.section_bg.section_flat{
+        background-color: white;
+    }
+}
+
+
+@media (min-width: 768px) {
+    main section.section_with_space,
+    main .section.section_with_space {
+        margin-left: -30px;
+        margin-right: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    
+    }
+
+    .section_with_space.section_bg.section_flat{
+        background-color: white;
     }
 }
 
@@ -426,6 +454,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .card .card-img img {
@@ -439,6 +469,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    cursor: pointer;
 }
 
 /**
@@ -447,6 +478,7 @@ main {
 .card.card-vertical {
     height: auto;
     flex-wrap: wrap;
+    
 }
 
 .card.card-no-border {
@@ -471,14 +503,18 @@ main {
 .card.card-vertical .card-body {
     flex-basis: 100%;
     padding: 20px;
-    margin-left: 0px
+    margin-left: 0px;
 }
 /**
  * End vertical modifier
  */
 /* END CARD */
 
-/* .hotels_section1 {
+
+
+    
+
+ /**.hotels_section1 {
     background-color: #E8E8E8;
     padding: 60px 40px;
     border-radius: 20px;
