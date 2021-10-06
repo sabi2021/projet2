@@ -142,8 +142,7 @@ section,
 
 section.section_bg,
 .section.section_bg {
-    background-color: #E8E8E8;
-    border: radius 20px;
+    background-color: #f2f2f2;
 }
 
 section.section_with_space,
@@ -184,8 +183,8 @@ section.section_with_space,
 }
 
 .stars .star-icon {
-    margin-top: 40px;
     color: #0065FC;
+    font-size: 13px;
 }
 
 .stars .star-disable {
@@ -284,44 +283,51 @@ main {
         margin-right: -30px;
         padding-left: 30px;
         padding-right: 30px;
-        
-    
     }
 
-    .section_with_space.section_bg.section_flat{
+    #section_flat{
         background-color: white;
     }
 }
 
-
 @media (min-width: 768px) {
-
-    .card.card-vertical{
-        margin-left: 20px;
+    .flat-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
     }
-    /* section 1 */
-    .section_with_space.section_bg.section_popular{
+
+    .flat-list .card {
+        flex-grow: 1;
+        flex-basis: 25%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #flat_and_popular {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #section_popular {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        margin-left: 20px;
+        margin-left: 30px;
     }
 
-    /* section 2 */
-    .section_with_space.section_bg.section_flat{
-        display: flex;
-        flex-direction: column;
+    #section_flat{
         flex-grow: 2;
     }  
 
-    /* section 3 */
-    .section_with_space.section_activity{
+    #section_activity{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 50px 1fr 1fr;
     }
 
-    .section_with_space.section_activity h2{
+    #section_activity h2{
         grid-column-start: 1;
         grid-column-end: 5;
         grid-row-start: 1;
@@ -331,6 +337,7 @@ main {
     .card.card-vertical.card-no-border{
         margin-left: 20px;
     }
+
     /* activity 1 */
     .activity1{
         grid-column-start: 1;
@@ -382,19 +389,6 @@ main {
         grid-row-start: 3;
         grid-row-end: 4;
     }
-
-    /* div dans section 2 */
-    .div-row1,
-    .div-row2{
-        display: flex;
-    }
-
-    /* div englobant section 1 et 2 */
-    .div-section12{
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
 }
 
 /**
@@ -558,8 +552,9 @@ main {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     cursor: pointer;
+    padding: 10px 0;
 }
 
 /**
@@ -568,7 +563,6 @@ main {
 .card.card-vertical {
     height: auto;
     flex-wrap: wrap;
-    
 }
 
 .card.card-no-border {
@@ -592,7 +586,7 @@ main {
 
 .card.card-vertical .card-body {
     flex-basis: 100%;
-    padding: 20px;
+    padding: 10px;
     margin-left: 0px;
 }
 /**
