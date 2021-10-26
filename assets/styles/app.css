@@ -475,17 +475,18 @@ main {
  * Vertical class modifer
  */
 .card.card-vertical {
-    height: auto;
-    flex-wrap: wrap;
+    height: 300px;
+    flex-direction: column;
     margin-bottom: 30px;
 }
 
 .card.card-no-border {
     padding: 0px;
+    height: 150px;
 }
 
 .card.card-vertical .card-img {
-    height: 120px;
+    width: 100%;
 }
 
 .card.card-vertical .card-img img {
@@ -496,7 +497,11 @@ main {
 .card.card-vertical .card-img {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 0px;
-    flex-basis: 100%;
+    flex-basis: 160%;
+}
+
+.card.card-vertical.card-no-border .card-img {
+    flex-basis: 10000%;
 }
 
 .card.card-vertical .card-body {
@@ -550,7 +555,7 @@ main {
         flex-direction: column;
         flex-wrap: wrap;
         align-content: space-between;
-        background-color: red;
+        background-color: white;
         height: 500px;
     }
 
@@ -561,6 +566,10 @@ main {
 
     .activity_list .card:nth-child(3n+1) {
         flex-basis: 100%;
+    }
+
+    .activity_list .card:nth-child(3n+1) img{
+        height: 100%;
     }
 
     .activity_list .card:first-child {
