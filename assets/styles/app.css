@@ -497,15 +497,10 @@ main {
 .card.card-vertical .card-img {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 0px;
-    flex-basis: 160%;
-}
-
-.card.card-vertical.card-no-border .card-img {
-    flex-basis: 10000%;
 }
 
 .card.card-vertical .card-body {
-    flex-basis: 100%;
+    flex-basis: 130px;
     padding: 10px;
     margin-left: 0px;
 }
@@ -568,12 +563,24 @@ main {
         flex-basis: 100%;
     }
 
-    .activity_list .card:nth-child(3n+1) img{
+    .activity_list .card:nth-child(3n+1) img {
         height: 100%;
+        width: auto;
+        max-width: none;
     }
 
     .activity_list .card:first-child {
         margin-left: 0;
     }
+
+    .activity_list .card.card-vertical .card-img {
+        flex-grow: 1;
+    }
+
+    .activity_list .card.card-vertical .card-body {
+        flex-basis: 10px;
+    }
 }
 /* END LISTING */
+
+/*footer*/
