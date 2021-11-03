@@ -88,6 +88,10 @@ a {
     text-decoration: none;
 }
 
+a:visited, a:focus {
+    color: inherit;
+}
+
 a:hover {
     text-decoration: underline;
     color: #0065FC;
@@ -96,8 +100,11 @@ a:hover {
 .info {
     font-weight: bold;
     cursor: pointer;
-    text-decoration: underline;
+    
 
+}
+.info:hover {
+    text-decoration: underline;
 }
 
 main,
@@ -301,7 +308,7 @@ main {
  * SEARCH
  */
 .search {
-    position: inline-block;
+    position: absolute;
     display: flex;
     position: relative;
     border: none;
@@ -583,4 +590,25 @@ main {
 }
 /* END LISTING */
 
+
 /*footer*/
+
+
+footer {
+    display: flex;
+    background-color: #F5F5F5;
+}
+
+footer div{
+    flex-basis: 33.33%;
+}   
+
+.footer_title{
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
